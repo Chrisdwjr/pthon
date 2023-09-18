@@ -1,0 +1,31 @@
+""" guess_game.py - this is a guessing game using a while loop"""
+
+# start by importing the random library - this has the random number
+# generator
+from random import *
+
+generatedNumber = randint(1,10)
+#print (generatedNumber)
+guessStatus = False
+
+#create a while loop to process the guesses
+while (guessStatus == False):
+    """ User chooses a number, number is compared to the random
+    number, if number matches the random number the loop stops"""
+    
+    userGuess = int(input("What is your guess? (enter a number between 1 and 10)"))
+    print (userGuess)
+    if generatedNumber == userGuess:
+        print("Congratulations, you guessed the correct number")
+        guessStatus = True
+        
+    if generatedNumber > userGuess:
+        print ("Too Low")
+        
+    if generatedNumber < userGuess:
+        print ("Too High")
+
+print ("") # print a blank line
+print ("You successfully guessed the number")
+print ("The game is over")
+
